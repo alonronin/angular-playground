@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+</head>
+<body>
+
+<div ng-app="todo">
+    <div ng-controller="ShowTodosCtrl as showCtrl">
+        <ul>
+            <li ng-repeat="todo in showCtrl.todos">task: {{todo.task}} - done: {{todo.done}}</li>
+        </ul>
+    </div>
+
+    <div ng-controller="TodoCtrl as todoCtrl">
+        <ul>
+            <li ng-repeat="todo in todoCtrl.todos">
+                {{todo.task}}
+
+                <select ng-model="todo.done" ng-options="option for option in todoCtrl.options">
+                </select>
+            </li>
+        </ul>
+
+        <form>
+            <input type="text" ng-model="newTask.task"/>
+            <select ng-model="newTask.done" ng-options="option for option in todoCtrl.options"></select>
+            <button type="submit" ng-click="todoCtrl.addTask(newTask)">Add</button>
+        </form>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/todo.js"></script>
+</body>
+</html>

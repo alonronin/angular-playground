@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+</head>
+<body>
+
+<div ng-app="communicationApp">
+    <superhero speed strength flight>Superman</superhero>
+    <superhero speed>Flash</superhero>
+    <superhero strength>Hulk</superhero>
+
+    <div class="panel" ng-if="abilities">
+        <ul>
+            <li ng-repeat="ability in abilities">{{ability}}</li>
+        </ul>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/directive_to_directive_communication.js"></script>
+</body>
+</html>

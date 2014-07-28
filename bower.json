@@ -1,0 +1,19 @@
+{
+  "name": "angular-lessons",
+  "version": "0.0.1",
+  "authors": [
+    "Alon Vlaadji <alon@ronin.co.il>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20",
+    "foundation": "~5.3.1"
+  }
+}
